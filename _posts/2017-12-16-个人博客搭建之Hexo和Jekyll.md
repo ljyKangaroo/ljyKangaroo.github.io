@@ -1,7 +1,3 @@
-layout: post
-title: 个人博客搭建之Hexo和Jekyll
-date: 2017-12-16 18:00:24.000000000 +09:00
-
 ###### 本文介绍两种博客的搭建：Github Pages +Hexo，Github Pages +Jekyll
 
 ##### 简介：
