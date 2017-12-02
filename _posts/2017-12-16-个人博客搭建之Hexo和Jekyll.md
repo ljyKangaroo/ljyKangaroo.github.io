@@ -1,0 +1,70 @@
+layout: post
+title: 个人博客搭建之Hexo和Jekyll
+date: 2017-12-16 18:00:24.000000000 +09:00
+
+###### 本文介绍两种博客的搭建：Github Pages +Hexo，Github Pages +Jekyll
+
+##### 简介：
+
+[极客学院翻译—GitHub Pages](http://wiki.jikexueyuan.com/project/github-pages-basics/) 可以为你或者你的项目提供介绍网页，它是由 GitHub 官方托管和发布的。你可以使用 GitHub 
+提供的页面自动生成器。也可以做个人博客，是个轻量级的博客系统，没有麻烦的配置。使用标记语言如Markdown，不需自己搭建服务器，还可以绑定自己的域名。
+
+[Hexo](https://hexo.io/)是一个npm包，在node环境上运行，他的功能就是将你的文章（.md文件）生成为静态html文件。虽然他在生成静态文件时需要你的本地机器安装node环境，但部署你的站点时则不需要后台环境，这一点不同于php驱动的wp，typecho和node驱动的ghost，你只需要一个托管静态资源的云平台即可。
+
+[Jekyll](http://jekyllcn.com/) l是一种简单的、适用于博客的、静态网站生成引擎。它使用一个模板目录作为网站布局的基础框架，支持Markdown、Textile等标记语言的解析，提供了模板、变量、插件等功能，最终生成一个完整的静态Web站点。说白了就是，只要安装Jekyll的规范和结构，不用写html，就可以生成网站。
+
+## 一 、GiHub Pages
+
+你需要拥有一个GitHub账号，注册或者登录 [GitHub](https://github.com)
+创建仓库并填写好对应名称：
+
+![A799DF41-8287-4966-9F75-C6B4AE532620](/Users/alberthuang/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/623039489/QQ/Temp.db/A799DF41-8287-4966-9F75-C6B4AE532620.png)
+
+![94E26B56-1C5E-481B-A7C6-B41B28BD2908](/Users/alberthuang/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/623039489/QQ/Temp.db/94E26B56-1C5E-481B-A7C6-B41B28BD2908.png)
+
+**Tips**： Respository name 中一定要输入：`你的用户名.github.io`，然后直接点 `Create repository“`按钮完成创建。
+
+**区别：**jekyll的现在可把仓库cloning下来，看初步效果。hexo的往下。
+
+## 二、Hexo
+
+首先搭配好环境：由于Hexo是在node环境运行。所以我们先安装node环境
+
+##### Nodejs安装：[官网](https://nodejs.org/en/download/) and 终端运行:
+
+```shell
+ brew install node
+```
+
+使用以下命令验证是否安装成功
+
+```shell
+node -v
+npm -v
+```
+
+##### Hexo安装：[官网](https://hexo.io/) and 终端运行：
+
+```shell
+npm install -g hexo
+```
+
+这里可能会出现安装失败的错误,
+
+```
+ERROR debug.log等错误
+```
+
+###### 这种时候终端运行继续完成安装：
+
+```shell
+sudo npm install --unsafe-perm --verbose -g hexo
+```
+
+**Tips：**其他错误可以百度hexo安装与配置解决。
+
+##### Hexo使用命令
+
+```shell
+
+```
