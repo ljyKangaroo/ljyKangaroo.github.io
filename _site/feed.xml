@@ -5,9 +5,129 @@
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 02 Dec 2017 14:30:41 +0800</pubDate>
-    <lastBuildDate>Sat, 02 Dec 2017 14:30:41 +0800</lastBuildDate>
+    <pubDate>Mon, 04 Dec 2017 11:57:07 +0800</pubDate>
+    <lastBuildDate>Mon, 04 Dec 2017 11:57:07 +0800</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>个人博客搭建之Hexo和Jekyll - 搭建篇</title>
+        <description>&lt;h6 id=&quot;本文介绍两种博客的搭建github-pages-hexogithub-pages-jekyll&quot;&gt;本文介绍两种博客的搭建：Github Pages +Hexo，Github Pages +Jekyll&lt;/h6&gt;
+
+&lt;h5 id=&quot;简介&quot;&gt;简介：&lt;/h5&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://wiki.jikexueyuan.com/project/github-pages-basics/&quot;&gt;极客学院翻译—GitHub Pages&lt;/a&gt; 可以为你或者你的项目提供介绍网页，它是由 GitHub 官方托管和发布的。你可以使用 GitHub 
+提供的页面自动生成器。也可以做个人博客，是个轻量级的博客系统，没有麻烦的配置。使用标记语言如Markdown，不需自己搭建服务器，还可以绑定自己的域名。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;是一个npm包，在node环境上运行，他的功能就是将你的文章（.md文件）生成为静态html文件。虽然他在生成静态文件时需要你的本地机器安装node环境，但部署你的站点时则不需要后台环境，这一点不同于php驱动的wp，typecho和node驱动的ghost，你只需要一个托管静态资源的云平台即可。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://jekyllcn.com/&quot;&gt;Jekyll&lt;/a&gt; l是一种简单的、适用于博客的、静态网站生成引擎。它使用一个模板目录作为网站布局的基础框架，支持Markdown、Textile等标记语言的解析，提供了模板、变量、插件等功能，最终生成一个完整的静态Web站点。说白了就是，只要安装Jekyll的规范和结构，不用写html，就可以生成网站。&lt;/p&gt;
+
+&lt;h2 id=&quot;一-gihub-pages&quot;&gt;一 、GiHub Pages&lt;/h2&gt;
+
+&lt;p&gt;你需要拥有一个GitHub账号，注册或者登录 &lt;a href=&quot;https://github.com&quot;&gt;GitHub&lt;/a&gt;
+创建仓库并填写好对应名称：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/Users/alberthuang/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/623039489/QQ/Temp.db/A799DF41-8287-4966-9F75-C6B4AE532620.png&quot; alt=&quot;A799DF41-8287-4966-9F75-C6B4AE532620&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/Users/alberthuang/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/623039489/QQ/Temp.db/94E26B56-1C5E-481B-A7C6-B41B28BD2908.png&quot; alt=&quot;94E26B56-1C5E-481B-A7C6-B41B28BD2908&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tips&lt;/strong&gt;： Respository name 中一定要输入：&lt;code class=&quot;highlighter-rouge&quot;&gt;你的用户名.github.io&lt;/code&gt;，然后直接点 &lt;code class=&quot;highlighter-rouge&quot;&gt;Create repository“&lt;/code&gt;按钮完成创建。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;区别：&lt;/strong&gt;jekyll的现在可把仓库cloning下来，看初步效果。hexo的往下。&lt;/p&gt;
+
+&lt;h2 id=&quot;二hexo&quot;&gt;二、Hexo&lt;/h2&gt;
+
+&lt;p&gt;首先搭配好环境：由于Hexo是在node环境运行。所以我们先安装node环境&lt;/p&gt;
+
+&lt;p&gt;Nodejs安装：&lt;a href=&quot;https://nodejs.org/en/download/&quot;&gt;官网&lt;/a&gt; and 终端运行:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; brew install node
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;使用以下命令验证是否安装成功&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;node -v
+npm -v
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Hexo安装：&lt;a href=&quot;https://hexo.io/&quot;&gt;官网&lt;/a&gt; and 终端运行：&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;npm install -g hexo
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;这里可能会出现安装失败的错误,&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ERROR debug.log等错误
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;这种时候终端运行继续完成安装：&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo npm install --unsafe-perm --verbose -g hexo
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Tips：&lt;/strong&gt;其他错误可以百度hexo安装与配置解决。&lt;/p&gt;
+
+&lt;h5 id=&quot;hexo使用命令&quot;&gt;Hexo使用命令&lt;/h5&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;hexo s --debug  &lt;span class=&quot;c&quot;&gt;# 启动服务预览&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;在浏览器上输入网址：&lt;a href=&quot;http://localhost:4000/&quot;&gt;http://localhost:4000/&lt;/a&gt;就可以预览博客效果了。Hexo的上线部署会在下一章讲解（相对于Jekyll的一键提交式的来说复杂）&lt;/p&gt;
+
+&lt;h2 id=&quot;三jekyll&quot;&gt;三、Jekyll&lt;/h2&gt;
+
+&lt;p&gt;首先将主题下载到本地&lt;a href=&quot;https://github.com/onevcat/vno-jekyll&quot;&gt;Vno-Jekyll&lt;/a&gt;，&lt;/p&gt;
+
+&lt;p&gt;相对于Hexo。jekyll不用搭建什么环境，因为mac已经自带了ruby了。&lt;/p&gt;
+
+&lt;p&gt;直接打开终端执行&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo gem install jekyll
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;淘宝镜像可能会找不到Jekyll。&lt;/p&gt;
+
+&lt;p&gt;更换镜像：&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gem source -r https://ruby.taobao.org/&lt;/code&gt;  (移除淘宝镜像)&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gem source -a https://rubygems.org/&lt;/code&gt;  (添加新镜像)&lt;/p&gt;
+
+&lt;p&gt;再次执行&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo gem install jekyll&lt;/code&gt;等待。&lt;/p&gt;
+
+&lt;p&gt;把创建好的github.io clone到你的电脑下，选择你自己想要的目录。把下载好的主题解压到代码仓库下。&lt;/p&gt;
+
+&lt;p&gt;进入主题文件目录&lt;code class=&quot;highlighter-rouge&quot;&gt;cd /Users/Jekyll/用户名.github.io&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;执行&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle install
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;没有bundle就先执行&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo gem install bundle&lt;/code&gt;再install&lt;/p&gt;
+
+&lt;p&gt;然后就可以开启Jekyll的调试了。&lt;code class=&quot;highlighter-rouge&quot;&gt;bundle exec jekyll serve&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;看见  Server address: http://127.0.0.1:4000/就可以打开成效了。&lt;/p&gt;
+
+&lt;p&gt;最后可以git提交代码。浏览器输入&lt;code class=&quot;highlighter-rouge&quot;&gt;(用户名).github.io&lt;/code&gt; 。&lt;/p&gt;
+
+&lt;p&gt;下一章会讲解Jekyll主题、写作和评论功能&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tips：&lt;/strong&gt;&lt;a href=&quot;https://hexo.io/themes/&quot;&gt;Hexo主题&lt;/a&gt;   and   &lt;a href=&quot;http://jekyllthemes.org/&quot;&gt;Jekyll主题&lt;/a&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 03 Dec 2017 14:32:24 +0800</pubDate>
+        <link>http://localhost:4000/2017/12/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8BHexo%E5%92%8CJekyll-%E6%90%AD%E5%BB%BA%E7%AF%87/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/12/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8BHexo%E5%92%8CJekyll-%E6%90%AD%E5%BB%BA%E7%AF%87/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Hello World - Vno</title>

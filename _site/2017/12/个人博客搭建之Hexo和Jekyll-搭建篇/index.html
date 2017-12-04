@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title>个人博客搭建之Hexo和Jekyll - 搭建篇</title>
+  <meta name="description" content="本文介绍两种博客的搭建：Github Pages +Hexo，Github Pages +Jekyll">
+  <meta name="author" content="Wei Wang">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="个人博客搭建之Hexo和Jekyll - 搭建篇">
+  <meta name="twitter:description" content="本文介绍两种博客的搭建：Github Pages +Hexo，Github Pages +Jekyll">
+  
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="个人博客搭建之Hexo和Jekyll - 搭建篇">
+  <meta property="og:description" content="本文介绍两种博客的搭建：Github Pages +Hexo，Github Pages +Jekyll">
+  
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" />
+  <link href="/assets/images/favicon.png" rel="shortcut icon" type="image/png">
+  
+  <link rel="stylesheet" href="/css/main.css">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="canonical" href="http://localhost:4000/2017/12/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8BHexo%E5%92%8CJekyll-%E6%90%AD%E5%BB%BA%E7%AF%87/">
+  <link rel="alternate" type="application/rss+xml" title="Karo Lin" href="http://localhost:4000/feed.xml">
+  
+  <meta name="google-site-verification" content="1-1ZlHoRvM0T2FqPbW2S-qLgYXN6rsn52kErlMPd_gw" />
+  
+</head>
+
+
+  <body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="fa fa-list btn-mobile-menu__icon"></i>
+        <i class="fa fa-angle-up btn-mobile-close__icon hidden"></i>
+    </span>
+    
+    <header class="panel-cover panel-cover--collapsed" style="background-image: url('/assets/images/background-cover.jpg')">
+  <div class="panel-main">
+
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        <a href="/#blog" title="前往 Karo Lin 的主页" class="blog-button"><img src="/assets/images/avatar.jpg" width="80" alt="Karo Lin logo" class="panel-cover__logo logo" /></a>
+        <h1 class="panel-cover__title panel-title"><a href="/#blog" title="link to homepage for Karo Lin" class="blog-button">Karo Lin</a></h1>
+        
+        <span class="panel-cover__subtitle panel-subtitle">文化的意义</span>
+        
+        <hr class="panel-cover__divider" />
+        <p class="panel-cover__description"></p>
+        <hr class="panel-cover__divider panel-cover__divider--secondary" />
+        
+        
+        <p class="panel-cover__description">ios开发者</p>
+        
+        
+        <div class="navigation-wrapper">
+          <div>
+            <nav class="cover-navigation cover-navigation--primary">
+              <ul class="navigation">
+                <li class="navigation__item"><a href="/#blog" title="Visit blog" class="blog-button">Blog</a></li>
+                
+                  <li class="navigation__item"><a href="https://github.com/ljyKangaroo" target="_blank" title="My GitHub">GitHub</a></li>
+                
+              </ul>
+            </nav>
+          </div>
+          
+          <div><nav class="cover-navigation navigation--social">
+  <ul class="navigation">
+
+  
+
+  
+  
+  
+
+  
+
+  <!-- RSS -->
+  <li class="navigation__item">
+    <a href="/feed.xml" rel="author" title="RSS" target="_blank">
+      <i class='social fa fa-rss'></i>
+      <span class="label">RSS</span>
+    </a>
+  </li>
+
+  
+  <!-- Email -->
+  <li class="navigation__item">
+    <a href="mailto:623039489@qq.com" title="Contact me">
+      <i class='social fa fa-envelope'></i>
+      <span class="label">Email</span>
+    </a>
+  </li>
+  
+
+  </ul>
+</nav>
+</div>
+        </div>
+      </div>
+    </div>
+    
+    
+    <div class="panel-cover--overlay cover-red"></div>
+    
+  </div>
+</header>
+
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="2017-12-03 15:32:24 +0900" itemprop="datePublished" class="post-meta__date date">2017-12-03</time> &#8226; <span class="post-meta__tags tags"></span>
+    </div>
+    <h1 class="post-title">个人博客搭建之Hexo和Jekyll - 搭建篇</h1>
+  </header>
+
+  <section class="post">
+    <h6 id="本文介绍两种博客的搭建github-pages-hexogithub-pages-jekyll">本文介绍两种博客的搭建：Github Pages +Hexo，Github Pages +Jekyll</h6>
+
+<h5 id="简介">简介：</h5>
+
+<p><a href="http://wiki.jikexueyuan.com/project/github-pages-basics/">极客学院翻译—GitHub Pages</a> 可以为你或者你的项目提供介绍网页，它是由 GitHub 官方托管和发布的。你可以使用 GitHub 
+提供的页面自动生成器。也可以做个人博客，是个轻量级的博客系统，没有麻烦的配置。使用标记语言如Markdown，不需自己搭建服务器，还可以绑定自己的域名。</p>
+
+<p><a href="https://hexo.io/">Hexo</a>是一个npm包，在node环境上运行，他的功能就是将你的文章（.md文件）生成为静态html文件。虽然他在生成静态文件时需要你的本地机器安装node环境，但部署你的站点时则不需要后台环境，这一点不同于php驱动的wp，typecho和node驱动的ghost，你只需要一个托管静态资源的云平台即可。</p>
+
+<p><a href="http://jekyllcn.com/">Jekyll</a> l是一种简单的、适用于博客的、静态网站生成引擎。它使用一个模板目录作为网站布局的基础框架，支持Markdown、Textile等标记语言的解析，提供了模板、变量、插件等功能，最终生成一个完整的静态Web站点。说白了就是，只要安装Jekyll的规范和结构，不用写html，就可以生成网站。</p>
+
+<h2 id="一-gihub-pages">一 、GiHub Pages</h2>
+
+<p>你需要拥有一个GitHub账号，注册或者登录 <a href="https://github.com">GitHub</a>
+创建仓库并填写好对应名称：</p>
+
+<p><img src="/Users/alberthuang/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/623039489/QQ/Temp.db/A799DF41-8287-4966-9F75-C6B4AE532620.png" alt="A799DF41-8287-4966-9F75-C6B4AE532620" /></p>
+
+<p><img src="/Users/alberthuang/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/623039489/QQ/Temp.db/94E26B56-1C5E-481B-A7C6-B41B28BD2908.png" alt="94E26B56-1C5E-481B-A7C6-B41B28BD2908" /></p>
+
+<p><strong>Tips</strong>： Respository name 中一定要输入：<code class="highlighter-rouge">你的用户名.github.io</code>，然后直接点 <code class="highlighter-rouge">Create repository“</code>按钮完成创建。</p>
+
+<p><strong>区别：</strong>jekyll的现在可把仓库cloning下来，看初步效果。hexo的往下。</p>
+
+<h2 id="二hexo">二、Hexo</h2>
+
+<p>首先搭配好环境：由于Hexo是在node环境运行。所以我们先安装node环境</p>
+
+<p>Nodejs安装：<a href="https://nodejs.org/en/download/">官网</a> and 终端运行:</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code> brew install node
+</code></pre>
+</div>
+
+<p>使用以下命令验证是否安装成功</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>node -v
+npm -v
+</code></pre>
+</div>
+
+<p>Hexo安装：<a href="https://hexo.io/">官网</a> and 终端运行：</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>npm install -g hexo
+</code></pre>
+</div>
+
+<p>这里可能会出现安装失败的错误,</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ERROR debug.log等错误
+</code></pre>
+</div>
+
+<p>这种时候终端运行继续完成安装：</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>sudo npm install --unsafe-perm --verbose -g hexo
+</code></pre>
+</div>
+
+<p><strong>Tips：</strong>其他错误可以百度hexo安装与配置解决。</p>
+
+<h5 id="hexo使用命令">Hexo使用命令</h5>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>hexo s --debug  <span class="c"># 启动服务预览</span>
+</code></pre>
+</div>
+<p>在浏览器上输入网址：<a href="http://localhost:4000/">http://localhost:4000/</a>就可以预览博客效果了。Hexo的上线部署会在下一章讲解（相对于Jekyll的一键提交式的来说复杂）</p>
+
+<h2 id="三jekyll">三、Jekyll</h2>
+
+<p>首先将主题下载到本地<a href="https://github.com/onevcat/vno-jekyll">Vno-Jekyll</a>，</p>
+
+<p>相对于Hexo。jekyll不用搭建什么环境，因为mac已经自带了ruby了。</p>
+
+<p>直接打开终端执行</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>sudo gem install jekyll
+</code></pre>
+</div>
+
+<p>淘宝镜像可能会找不到Jekyll。</p>
+
+<p>更换镜像：</p>
+
+<p><code class="highlighter-rouge">gem source -r https://ruby.taobao.org/</code>  (移除淘宝镜像)</p>
+
+<p><code class="highlighter-rouge">gem source -a https://rubygems.org/</code>  (添加新镜像)</p>
+
+<p>再次执行<code class="highlighter-rouge">sudo gem install jekyll</code>等待。</p>
+
+<p>把创建好的github.io clone到你的电脑下，选择你自己想要的目录。把下载好的主题解压到代码仓库下。</p>
+
+<p>进入主题文件目录<code class="highlighter-rouge">cd /Users/Jekyll/用户名.github.io</code></p>
+
+<p>执行</p>
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>bundle install
+</code></pre>
+</div>
+
+<p>没有bundle就先执行<code class="highlighter-rouge">sudo gem install bundle</code>再install</p>
+
+<p>然后就可以开启Jekyll的调试了。<code class="highlighter-rouge">bundle exec jekyll serve</code></p>
+
+<p>看见  Server address: http://127.0.0.1:4000/就可以打开成效了。</p>
+
+<p>最后可以git提交代码。浏览器输入<code class="highlighter-rouge">(用户名).github.io</code> 。</p>
+
+<p>下一章会讲解Jekyll主题、写作和评论功能</p>
+
+<p><strong>Tips：</strong><a href="https://hexo.io/themes/">Hexo主题</a>   and   <a href="http://jekyllthemes.org/">Jekyll主题</a></p>
+
+  </section>
+</article>
+
+<section class="read-more">
+   
+   
+   
+   
+   <div class="read-more-item">
+       <span class="read-more-item-dim">更早的文章</span>
+       <h2 class="post-list__post-title post-title"><a href="/2016/02/hello-world-vno/" title="link to Hello World - Vno">Hello World - Vno</a></h2>
+       <p class="excerpt">What’s thisVno Jekyll is a theme for Jekyll. It is a port of my Ghost theme vno, which is originally developed from Dale Anthony’s Uno.Usage$ git clone https://github.com/onevcat/vno-jekyll.git your_site$ cd your_site$ bundler install$ bundler exe...&hellip;</p>
+       <div class="post-list__meta"><time datetime="2016-02-16 15:32:24 +0900" class="post-list__meta--date date">2016-02-16</time> &#8226; <span class="post-list__meta--tags tags"></span><a class="btn-border-small" href=/2016/02/hello-world-vno/>继续阅读</a></div>
+   </div>
+   
+</section>
+
+<section class="post-comments">
+  
+    <div id="disqus_thread"></div>
+    <script>
+    
+    var disqus_config = function () {
+        this.page.url = "http://localhost:4000/2017/12/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8BHexo%E5%92%8CJekyll-%E6%90%AD%E5%BB%BA%E7%AF%87/";
+        this.page.identifier = "/2017/12/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E4%B9%8BHexo%E5%92%8CJekyll-%E6%90%AD%E5%BB%BA%E7%AF%87/";
+    };
+
+    var disqus_shortname = 'vno-jekyll';
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+        var d = document, s = d.createElement('script');
+        s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>要查看<a href="http://disqus.com/?ref_noscript"> Disqus </a>评论，请启用 JavaScript</noscript>
+    
+  
+  
+  
+  
+</section>
+
+
+            <section class="footer">
+    <footer>
+    	<span class="footer__copyright">本站点采用<a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享 署名-非商业性使用-相同方式共享 4.0 国际 许可协议</a></span>
+        <span class="footer__copyright">由 <a href="https://jekyllrb.com">Jekyll</a> 于 2017-12-04 生成，感谢 <a href="https://www.digitalocean.com/?refcode=30ed2d146762">Digital Ocean</a> 为本站提供稳定的 VPS 服务</span>
+        <span class="footer__copyright">本站由 <a href="http://onev.cat">@onevcat</a> 创建，采用 <a href="https://github.com/onevcat/vno-jekyll">Vno - Jekyll</a> 作为主题，您可以在 GitHub 找到<a href="https://github.com/onevcat/OneV-s-Den">本站源码</a> - &copy; 2017</span>
+    </footer>
+</section>
+
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+
+<script type="text/javascript" src="/js/main.js"></script>
+
+
+
+    
+  </body>
+
+</html>

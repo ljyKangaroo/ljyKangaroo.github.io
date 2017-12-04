@@ -1,3 +1,9 @@
+---
+layout: post
+title: 个人博客搭建之Hexo和Jekyll - 搭建篇
+date: 2017-12-03 15:32:24.000000000 +09:00
+---
+
 ###### 本文介绍两种博客的搭建：Github Pages +Hexo，Github Pages +Jekyll
 
 ##### 简介：
@@ -26,7 +32,7 @@
 
 首先搭配好环境：由于Hexo是在node环境运行。所以我们先安装node环境
 
-##### Nodejs安装：[官网](https://nodejs.org/en/download/) and 终端运行:
+Nodejs安装：[官网](https://nodejs.org/en/download/) and 终端运行:
 
 ```shell
  brew install node
@@ -39,7 +45,7 @@ node -v
 npm -v
 ```
 
-##### Hexo安装：[官网](https://hexo.io/) and 终端运行：
+Hexo安装：[官网](https://hexo.io/) and 终端运行：
 
 ```shell
 npm install -g hexo
@@ -51,7 +57,7 @@ npm install -g hexo
 ERROR debug.log等错误
 ```
 
-###### 这种时候终端运行继续完成安装：
+这种时候终端运行继续完成安装：
 
 ```shell
 sudo npm install --unsafe-perm --verbose -g hexo
@@ -62,5 +68,49 @@ sudo npm install --unsafe-perm --verbose -g hexo
 ##### Hexo使用命令
 
 ```shell
-
+hexo s --debug  # 启动服务预览
 ```
+在浏览器上输入网址：[http://localhost:4000/](http://localhost:4000/)就可以预览博客效果了。Hexo的上线部署会在下一章讲解（相对于Jekyll的一键提交式的来说复杂）
+
+## 三、Jekyll
+
+首先将主题下载到本地[Vno-Jekyll](https://github.com/onevcat/vno-jekyll)，
+
+相对于Hexo。jekyll不用搭建什么环境，因为mac已经自带了ruby了。
+
+直接打开终端执行	
+
+```shell
+sudo gem install jekyll
+```
+
+淘宝镜像可能会找不到Jekyll。
+
+更换镜像：
+
+`gem source -r https://ruby.taobao.org/`  (移除淘宝镜像)
+
+`gem source -a https://rubygems.org/`  (添加新镜像)
+
+再次执行`sudo gem install jekyll`等待。
+
+把创建好的github.io clone到你的电脑下，选择你自己想要的目录。把下载好的主题解压到代码仓库下。
+
+进入主题文件目录`cd /Users/Jekyll/用户名.github.io`
+
+执行
+```shell
+bundle install
+```
+
+没有bundle就先执行`sudo gem install bundle`再install
+
+然后就可以开启Jekyll的调试了。`bundle exec jekyll serve`
+
+看见  Server address: http://127.0.0.1:4000/就可以打开成效了。
+
+最后可以git提交代码。浏览器输入`(用户名).github.io` 。
+
+下一章会讲解Jekyll主题、写作和评论功能
+
+**Tips：**[Hexo主题](https://hexo.io/themes/)   and   [Jekyll主题](http://jekyllthemes.org/)
