@@ -70,7 +70,7 @@ sudo npm install --unsafe-perm --verbose -g hexo
 ```shell
 hexo s --debug  # 启动服务预览
 ```
-在浏览器上输入网址：[http://localhost:4000/](http://localhost:4000/)就可以预览博客效果了。Hexo的上线部署会在下一章讲解（相对于Jekyll的一键提交式的来说复杂）
+在浏览器上输入网址：[http://localhost:4000/](http://localhost:4000/)就可以预览博客效果了。（相对于Jekyll的一键提交式的来说复杂）
 
 ## 三、Jekyll
 
@@ -110,7 +110,5 @@ bundle install
 看见  Server address: http://127.0.0.1:4000/就可以打开成效了。
 
 最后可以git提交代码。浏览器输入`(用户名).github.io` 。
-
-下一章会讲解Jekyll主题、写作和评论功能
 
 **Tips：**[Hexo主题](https://hexo.io/themes/)   and   [Jekyll主题](http://jekyllthemes.org/)
