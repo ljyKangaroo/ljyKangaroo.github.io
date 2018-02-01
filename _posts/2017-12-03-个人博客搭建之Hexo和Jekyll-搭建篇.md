@@ -20,9 +20,9 @@ date: 2017-12-03 15:32:24.000000000 +09:00
 你需要拥有一个GitHub账号，注册或者登录 [GitHub](https://github.com)
 创建仓库并填写好对应名称：
 
-![A799DF41-8287-4966-9F75-C6B4AE532620](/Users/alberthuang/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/623039489/QQ/Temp.db/A799DF41-8287-4966-9F75-C6B4AE532620.png)
+<img src="./image/1.png" height="568" hspace="20">
 
-![94E26B56-1C5E-481B-A7C6-B41B28BD2908](/Users/alberthuang/Library/Containers/com.tencent.qq/Data/Library/Application Support/QQ/Users/623039489/QQ/Temp.db/94E26B56-1C5E-481B-A7C6-B41B28BD2908.png)
+<img src="./image/2.png" height="568" hspace="20">
 
 **Tips**： Respository name 中一定要输入：`你的用户名.github.io`，然后直接点 `Create repository“`按钮完成创建。
 
