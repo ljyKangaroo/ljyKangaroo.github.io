@@ -20,9 +20,9 @@ date: 2017-12-03 15:32:24.000000000 +09:00
 你需要拥有一个GitHub账号，注册或者登录 [GitHub](https://github.com)
 创建仓库并填写好对应名称：
 
-#### <img src="https://ljykangaroo.github.io/public/image/1.png" height="568" hspace="20">
+#### <img src="https://ljykangaroo.github.io/assets/images/2017/1.png">
 
-<img src="https://ljykangaroo.github.io/public/image/2.png" height="568" hspace="20">
+<img src="https://ljykangaroo.github.io/assets/images/2017/2.png">
 
 **Tips**： Respository name 中一定要输入：`你的用户名.github.io`，然后直接点 `Create repository“`按钮完成创建。
 
