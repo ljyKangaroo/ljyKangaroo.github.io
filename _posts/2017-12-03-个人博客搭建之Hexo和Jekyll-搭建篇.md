@@ -1,7 +1,6 @@
 ---
 title: 个人博客搭建之Hexo和Jekyll - 搭建篇
-tags: Other
-aside: true
+tags: 记录
 ---
 
 ## 本文介绍两种博客的搭建：Github Pages +Hexo，Github Pages +Jekyll
