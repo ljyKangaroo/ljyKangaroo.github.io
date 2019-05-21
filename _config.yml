@@ -18,7 +18,7 @@
 ##############################
 text_skin: default # "default" (default), "dark", "forest", "ocean", "chocolate", "orange"
 highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
-url     : https://ljykangaroo.github.io/
+url     : https://ljykangaroo.github.io
 baseurl : # does not include hostname
 title   : My Blog
 description: > # this means to ignore newlines until "Language & timezone"
@@ -36,7 +36,7 @@ timezone: Asia/Shanghai
 author:
   type      : # "person" (default), "organization"
   name      : Karo
-  url       :
+  url       : https://ljykangaroo.github.io
   avatar    : avatar.jpg
   bio       : I am an amazing person.
   email     :
