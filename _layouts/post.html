@@ -2,18 +2,21 @@
 layout: default
 ---
 
-<article class="post-container post-container--single" itemscope itemtype="http://schema.org/BlogPosting">
-  <header class="post-header">
-    <div class="post-meta">
-      <time datetime="{{page.date | date: date_to_xmlschema}}" itemprop="datePublished" class="post-meta__date date">{{page.date | date: "%F"}}</time> &#8226; <span class="post-meta__tags tags">{{page.tags | join:' '}}</span>
-    </div>
-    <h1 class="post-title">{{ page.title }}</h1>
-  </header>
+<div class="content">
+	<h1>{{ page.title }}</h1>
+	<p class="meta">{{ page.date | date_to_string }}</p>
+	{{ page.content | markdownify }}
+</div>
 
-  <section class="post">
-    {{ content }}
-  </section>
-</article>
+<div class="comment">
+	GitHub <a href="https://github.com/ljyKangaroo">@ljyKangaroo</a>.
+</div>
 
-{% include read-more.html %}
-{% include comments.html %}
+<div class="related">
+  <h2>Related</h2>
+  <ul class="posts">
+    {% for post in site.related_posts limit:5 %}
+      <li><span class="post-date">{{ post.date | date_to_string }} · </span><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
