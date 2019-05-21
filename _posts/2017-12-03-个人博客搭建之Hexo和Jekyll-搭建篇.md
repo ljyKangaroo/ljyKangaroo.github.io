@@ -4,9 +4,9 @@ tags: Other
 aside: true
 ---
 
-###### 本文介绍两种博客的搭建：Github Pages +Hexo，Github Pages +Jekyll
+## 本文介绍两种博客的搭建：Github Pages +Hexo，Github Pages +Jekyll
 
-##### 简介：
+### 简介：
 
 [极客学院翻译—GitHub Pages](http://wiki.jikexueyuan.com/project/github-pages-basics/) 可以为你或者你的项目提供介绍网页，它是由 GitHub 官方托管和发布的。你可以使用 GitHub 
 提供的页面自动生成器。也可以做个人博客，是个轻量级的博客系统，没有麻烦的配置。使用标记语言如Markdown，不需自己搭建服务器，还可以绑定自己的域名。
@@ -15,20 +15,20 @@ aside: true
 
 [Jekyll](http://jekyllcn.com/) l是一种简单的、适用于博客的、静态网站生成引擎。它使用一个模板目录作为网站布局的基础框架，支持Markdown、Textile等标记语言的解析，提供了模板、变量、插件等功能，最终生成一个完整的静态Web站点。说白了就是，只要安装Jekyll的规范和结构，不用写html，就可以生成网站。
 
-## 一 、GiHub Pages
+### 一 、GiHub Pages
 
 你需要拥有一个GitHub账号，注册或者登录 [GitHub](https://github.com)
 创建仓库并填写好对应名称：
 
-#### <img src="https://ljykangaroo.github.io/assets/images/2017/1.png">
+#### <img src="https://ljykangaroo.github.io/assets/2017/1.png">
 
-<img src="https://ljykangaroo.github.io/assets/images/2017/2.png">
+<img src="https://ljykangaroo.github.io/assets/2017/2.png">
 
 **Tips**： Respository name 中一定要输入：`你的用户名.github.io`，然后直接点 `Create repository“`按钮完成创建。
 
 **区别：**jekyll的现在可把仓库cloning下来，看初步效果。hexo的往下。
 
-## 二、Hexo
+### 二、Hexo
 
 首先搭配好环境：由于Hexo是在node环境运行。所以我们先安装node环境
 
@@ -65,14 +65,14 @@ sudo npm install --unsafe-perm --verbose -g hexo
 
 **Tips：**其他错误可以百度hexo安装与配置解决。
 
-##### Hexo使用命令
+### Hexo使用命令
 
 ```shell
 hexo s --debug  # 启动服务预览
 ```
 在浏览器上输入网址：[http://localhost:4000/](http://localhost:4000/)就可以预览博客效果了。（相对于Jekyll的一键提交式的来说复杂）
 
-## 三、Jekyll
+### 三、Jekyll
 
 首先将主题下载到本地[Vno-Jekyll](https://github.com/onevcat/vno-jekyll)，
 
